@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Thanpicha Prongjit</title>
+    <style>
+        /* ตั้งค่าพื้นหลังหลักของเว็บไซต์ */
+        body {
+            background-color: #93A06C;
+            font-family: 'Sarabun', sans-serif, Tahoma;
+            margin: 0;
+            padding: 20px;
+            color: #000000;
+        }
+
+        /* จัดแต่งหัวข้อใหญ่ตรงกลาง */
+        .main-title {
+            text-align: center;
+            color: #dc6986;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        /* จัดแต่งกล่องข้อความที่มีพื้นหลังสีขาวโปร่งแสง */
+        .card {
+            background-color: rgba(255, 255, 255, 0.85); /* สีขาวอ่อนบาง */
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* จัดแต่งหัวข้อประจำแต่ละกล่อง */
+        .card-title {
+            color: #dc6986;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* การจัดแต่งรูปภาพส่วนตัว */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%; /* ทำเป็นรูปวงกลม */
+            display: block;
+            margin: 0 auto 20px auto;
+            border: 4px solid #dc6986;
+        }
+
+        /* จัดสไตล์ลิงก์เชื่อมโยงไปยังหน้าที่สอง */
+        .portfolio-link {
+            display: inline-block;
+            background-color: #dc6986;
+            color: white !important;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .portfolio-link:hover {
+            background-color: #c55370;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="main-title">Welcome to my portfolio</h1>
+
+    <div class="card" style="text-align: center;">
+        <h2 class="card-title">ข้อมูลส่วนตัวของฉัน</h2>
+        
+        <img src="profile.jpg" alt="รูปภาพของ ธัญพิชชา" class="profile-img">
+        
+        <div style="text-align: left; line-height: 1.8;">
+            <p><strong>ชื่อ-นามสกุล:</strong> น.ส.ธัญพิชชา โปร่งจิต</p>
+            <p><strong>Name:</strong> Thanpicha Prongjit</p>
+            <p><strong>การศึกษา:</strong> กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
+            <p><strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">เป้าหมายและความสนใจในการศึกษาต่อ</h2>
+        <p style="line-height: 1.8;">
+            ฉันมีความสนใจที่จะศึกษาต่อในคณะเภสัชศาสตร์ สาขาเภสัชศาสตร์ มหาวิทยาลัยมหิดล 
+            เนื่องจากตั้งแต่นัยระดับชั้นมัธยมศึกษาปีที่ 4 ฉันได้มีโอกาสเข้าร่วมงาน Open House ของมหาวิทยาลัยมหิดล 
+            และได้ร่วมกิจกรรมของคณะเภสัชศาสตร์ ซึ่งทำให้ได้เรียนรู้เกี่ยวกับการปรุงยา ปฏิกิริยาการทำงานของยาแต่ละชนิด 
+            รวมถึงได้ทดลองจำลองการจ่ายยาให้กับผู้ป่วย ประสบการณ์ครั้งนั้นจุดประกายให้เกิดความชอบและความสนใจในสายอาชีพนี้อย่างจริงจัง 
+            หลังจากนั้นจึงได้ศึกษาข้อมูลเพิ่มเติมเกี่ยวกับการเรียนและการประกอบอาชีพด้านเภสัชกรรม จนเกิดความตั้งใจอันแน่วแน่ที่จะเข้าศึกษาต่อในคณะเภสัชศาสตร์
+        </p>
+    </div>
+
+    <div class="card" style="text-align: center;">
+        <h2 class="card-title">ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
+        <p>คลิกที่ปุ่มด้านล่างเพื่อรับชมผลงานและกิจกรรมทั้งหมดของฉัน</p>
+        <a href="portfolio.html" class="portfolio-link">ดูผลงานและกิจกรรมทั้งหมด</a>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">ช่องทางการติดต่อ</h2>
+        <p style="line-height: 1.8;">
+            <strong>เบอร์โทรศัพท์:</strong> 062-473-7156<br>
+            <strong>Gmail:</strong> s34370@banbung.ac.th
+        </p>
+    </div>
+
+</body>
+</html>
 
