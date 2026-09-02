@@ -3,162 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - ธัญพิชชา โปร่งจิต</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Portfolio - Thanpicha Prongjit</title>
     <style>
-        * {
-            box-sizing: border-box;
-            font-family: 'TH Sarabun New', sans-serif;
-            font-size: 22px; /* ปรับขนาดฟอนต์ให้พอดีสำหรับ TH Sarabun */
-        }
-
+        /* ตั้งค่าพื้นหลังหลักของเว็บไซต์ */
         body {
             background-color: #4a72cf;
+            font-family: 'Sarabun', sans-serif, Tahoma;
             margin: 0;
-            padding: 40px 20px;
+            padding: 20px;
             color: #000000;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* หัวข้อหลัก */
+        /* จัดแต่งหัวข้อใหญ่ตรงกลาง */
         .main-title {
             text-align: center;
             color: #dc6986;
-            font-size: 48px;
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 15px 30px;
-            border: 4px solid #ffffff;
-            border-radius: 15px;
-            display: border-box;
-            margin: 0 auto 40px auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        /* กล่องข้อความพื้นหลังสีขาวบาง */
-        .card {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(5px);
-            border-radius: 15px;
-            padding: 30px;
+            margin-top: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-size: 2.5rem;
         }
 
+        /* จัดแต่งกล่องข้อความที่มีพื้นหลังสีขาวโปร่งแสง */
+        .card {
+            background-color: rgba(255, 255, 255, 0.85); /* สีขาวอ่อนบาง */
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* จัดแต่งหัวข้อประจำแต่ละกล่อง */
         .card-title {
             color: #dc6986;
-            font-size: 32px;
-            font-weight: bold;
             margin-top: 0;
             margin-bottom: 15px;
-            border-bottom: 2px solid #dc6986;
-            padding-bottom: 5px;
+            font-size: 1.5rem;
         }
 
-        /* ส่วนโปรไฟล์ */
-        .profile-container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 25px;
-        }
-
+        /* การจัดแต่งรูปภาพส่วนตัว */
         .profile-img {
-            width: 160px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 50%; /* ทำเป็นรูปวงกลม */
+            display: block;
+            margin: 0 auto 20px auto;
             border: 4px solid #dc6986;
         }
 
-        /* ลิงก์ปุ่มกดไปหน้าที่ 2 */
-        .btn-link {
+        /* จัดสไตล์ลิงก์เชื่อมโยงไปยังหน้าที่สอง */
+        .portfolio-link {
             display: inline-block;
             background-color: #dc6986;
-            color: #ffffff !important;
-            padding: 10px 25px;
+            color: white !important;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 8px;
-            font-size: 24px;
             font-weight: bold;
-            transition: background 0.3s;
             margin-top: 10px;
+            transition: background-color 0.3s;
         }
 
-        .btn-link:hover {
-            background-color: #c55471;
-        }
-
-        /* รายการติดต่อ */
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
-
-        .contact-item i {
-            color: #dc6986;
-            font-size: 26px;
+        .portfolio-link:hover {
+            background-color: #c55370;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1 class="main-title">Welcome to my portfolio</h1>
+    <h1 class="main-title">Welcome to my portfolio</h1>
 
-        <div class="card">
-            <h2 class="card-title">ข้อมูลส่วนตัวของฉัน</h2>
-            <div class="profile-container">
-                <img src="profile.jpg" alt="รูปถ่ายธัญพิชชา" class="profile-img">
-                <div>
-                    <p style="margin: 5px 0;"><strong>ชื่อ-นามสกุล:</strong> น.ส.ธัญพิชชา โปร่งจิต (แก้ม)</p>
-                    <p style="margin: 5px 0;"><strong>Name:</strong> Miss Thanpicha Prongjit</p>
-                    <p style="margin: 5px 0;"><strong>การศึกษา:</strong> กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
-                    <p style="margin: 5px 0;"><strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
-                </div>
-            </div>
+    <div class="card" style="text-align: center;">
+        <h2 class="card-title">ข้อมูลส่วนตัวของฉัน</h2>
+        
+        <img src="profile.jpg" alt="รูปภาพของ ธัญพิชชา" class="profile-img">
+        
+        <div style="text-align: left; line-height: 1.8;">
+            <p><strong>ชื่อ-นามสกุล:</strong> น.ส.ธัญพิชชา โปร่งจิต</p>
+            <p><strong>Name:</strong> Thanpicha Prongjit</p>
+            <p><strong>การศึกษา:</strong> กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
+            <p><strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
         </div>
+    </div>
 
-        <div class="card">
-            <h2 class="card-title">เป้าหมายและความสนใจในการศึกษาต่อ</h2>
-            <p>
-                ฉันมีความสนใจและตั้งใจที่จะเข้าศึกษาต่อใน <strong>คณะเภสัชศาสตร์ สาขาเภสัชศาสตร์ มหาวิทยาลัยมหิดล</strong> 
-            </p>
-            <p>
-                จุดเริ่มต้นเกิดจากการได้เข้าร่วมกิจกรรม Open House ของมหาวิทยาลัยมหิดล ตั้งแต่ระดับชั้นมัธยมศึกษาปีที่ 4 โดยได้เข้าร่วมเวิร์กช็อปของคณะเภสัชศาสตร์ ซึ่งเปิดโอกาสให้ได้ทดลองปฏิบัติจริง ทั้งการเรียนรู้เรื่องการปรุงยา ศึกษาปฏิกิริยาการทำงานของยาแต่ละชนิด และได้จำลองบทบาทการจ่ายยาให้กับผู้ป่วย ประสบการณ์ครั้งนั้นจุดประกายความชอบและทำให้ฉันหลงใหลในสายอาชีพนี้อย่างจริงจัง
-            </p>
-            <p>
-                หลังจากนั้น ฉันจึงเริ่มศึกษาข้อมูลเชิงลึกเกี่ยวกับการเรียนและการประกอบอาชีพเภสัชกรเพิ่มเติม ซึ่งยิ่งมั่นใจและสร้างแรงบันดาลใจให้ฉันมีความมุ่งมั่นที่จะเข้าศึกษาต่อในคณะเภสัชศาสตร์ให้สำเร็จ
-            </p>
-        </div>
+    <div class="card">
+        <h2 class="card-title">เป้าหมายและความสนใจในการศึกษาต่อ</h2>
+        <p style="line-height: 1.8;">
+            ฉันมีความสนใจที่จะศึกษาต่อในคณะเภสัชศาสตร์ สาขาเภสัชศาสตร์ มหาวิทยาลัยมหิดล 
+            เนื่องจากตั้งแต่นัยระดับชั้นมัธยมศึกษาปีที่ 4 ฉันได้มีโอกาสเข้าร่วมงาน Open House ของมหาวิทยาลัยมหิดล 
+            และได้ร่วมกิจกรรมของคณะเภสัชศาสตร์ ซึ่งทำให้ได้เรียนรู้เกี่ยวกับการปรุงยา ปฏิกิริยาการทำงานของยาแต่ละชนิด 
+            รวมถึงได้ทดลองจำลองการจ่ายยาให้กับผู้ป่วย ประสบการณ์ครั้งนั้นจุดประกายให้เกิดความชอบและความสนใจในสายอาชีพนี้อย่างจริงจัง 
+            หลังจากนั้นจึงได้ศึกษาข้อมูลเพิ่มเติมเกี่ยวกับการเรียนและการประกอบอาชีพด้านเภสัชกรรม จนเกิดความตั้งใจอันแน่วแน่ที่จะเข้าศึกษาต่อในคณะเภสัชศาสตร์
+        </p>
+    </div>
 
-        <div class="card" style="text-align: center;">
-            <h2 class="card-title" style="border: none;">ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
-            <p>รับชมภาพกิจกรรม ผลงาน และเกียรติบัตรทั้งหมดของฉันได้ที่นี่</p>
-            <a href="works.html" class="btn-link">คลิกเพื่อดูผลงานและกิจกรรม</a>
-        </div>
+    <div class="card" style="text-align: center;">
+        <h2 class="card-title">ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
+        <p>คลิกที่ปุ่มด้านล่างเพื่อรับชมผลงานและกิจกรรมทั้งหมดของฉัน</p>
+        <a href="portfolio.html" class="portfolio-link">ดูผลงานและกิจกรรมทั้งหมด</a>
+    </div>
 
-        <div class="card">
-            <h2 class="card-title">ช่องทางการติดต่อ</h2>
-            <div class="contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <span><strong>เบอร์โทรศัพท์:</strong> 062-473-7156</span>
-            </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <span><strong>Gmail:</strong> s34370@banbung.ac.th</span>
-            </div>
-        </div>
+    <div class="card">
+        <h2 class="card-title">ช่องทางการติดต่อ</h2>
+        <p style="line-height: 1.8;">
+            <strong>เบอร์โทรศัพท์:</strong> 062-473-7156<br>
+            <strong>Gmail:</strong> s34370@banbung.ac.th
+        </p>
     </div>
 
 </body>
