@@ -22,7 +22,7 @@
             color: #2c3e50;
         }
 
-        /* หัวข้อหลักด้านบนสุด เพิ่มความหรูหราและทางการ */
+        /* หัวข้อหลักด้านบนสุด */
         .main-header {
             text-align: center;
             margin-bottom: 35px;
@@ -44,7 +44,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* การ์ดเนื้อหา: ปรับสีและเงาให้ดูเรียบหรู คล้ายเอกสารทางการ */
+        /* การ์ดเนื้อหา */
         .card {
             background-color: rgba(255, 255, 255, 0.95);
             max-width: 820px;
@@ -52,7 +52,7 @@
             padding: 30px 35px;
             border-radius: 12px;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-            border-left: 6px solid #dc6986; /* เส้นแถบสีด้านซ้ายเพิ่มความเรียบหรู */
+            border-left: 6px solid #dc6986;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -78,7 +78,7 @@
             font-size: 1.8rem;
         }
 
-        /* รูปโปรไฟล์ เพิ่มกรอบสองชั้นให้ดูสง่างาม */
+        /* รูปโปรไฟล์ */
         .profile-img-container {
             text-align: center;
             margin-bottom: 25px;
@@ -94,30 +94,32 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        /* รายละเอียดข้อมูลส่วนตัว ปรับให้เป็นระเบียบ */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 12px 20px;
-            line-height: 1.8;
+        /* รายละเอียดแบบเรียงลงมาบรรทัดเดียว */
+        .info-list {
             background: #fdfdfd;
-            padding: 20px;
+            padding: 20px 25px;
             border-radius: 8px;
             border: 1px solid #eaeaea;
+            line-height: 2;
         }
 
         .info-item {
             display: flex;
             align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
         }
 
         .info-item i {
             color: #dc6986;
-            width: 25px;
+            width: 30px;
             font-size: 1.2rem;
         }
 
-        /* ปุ่มกดแบบทางการ (Elegant Button) */
+        /* ปุ่มกด */
         .btn-container {
             text-align: center;
             margin-top: 20px;
@@ -148,7 +150,7 @@
             box-shadow: 0 6px 14px rgba(220, 105, 134, 0.4);
         }
 
-        /* แถบเมนูด้านซ้าย แบบมินิมอลและเป็นทางการ */
+        /* แถบเมนูด้านซ้าย */
         .left-sidebar {
             position: fixed;
             left: 20px;
@@ -211,7 +213,6 @@
             .left-sidebar a { width: 36px; height: 36px; font-size: 1rem; }
             .left-sidebar a::after { display: none; }
             .card { padding: 20px; }
-            .info-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -231,7 +232,7 @@
         <div class="sub-title">แฟ้มสะสมผลงาน | น.ส.ธัญพิชชา โปร่งจิต</div>
     </header>
 
-    <!-- กล่องข้อความที่ 1: ข้อมูลส่วนตัว -->
+    <!-- กล่องข้อความที่ 1: ข้อมูลส่วนตัว (เรียงลงมาบรรทัดเดียว) -->
     <section class="card" id="profile">
         <h2 class="card-title"><i class="fas fa-id-card"></i>ข้อมูลส่วนตัว (Personal Profile)</h2>
         
@@ -239,7 +240,7 @@
             <img src="profile.jpg" alt="รูปภาพของ ธัญพิชชา โปร่งจิต" class="profile-img">
         </div>
         
-        <div class="info-grid">
+        <div class="info-list">
             <div class="info-item">
                 <i class="fas fa-user"></i>
                 <span><strong>ชื่อ-นามสกุล:</strong> น.ส.ธัญพิชชา โปร่งจิต</span>
@@ -254,16 +255,16 @@
             </div>
             <div class="info-item">
                 <i class="fas fa-graduation-cap"></i>
-                <span><strong>ระดับการศึกษา:</strong> มัธยมศึกษาปีที่ 6</span>
+                <span><strong>ระดับการศึกษา:</strong> กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</span>
             </div>
-            <div class="info-item" style="grid-column: 1 / -1;">
+            <div class="info-item">
                 <i class="fas fa-flask"></i>
                 <span><strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</span>
             </div>
         </div>
 
         <div class="btn-container">
-            <a href="about.html" class="btn-link"><i class="fas fa-file-alt"></i> ดูประวัติการศึกษาเพิ่มเติม</a>
+            <a href="about.html" class="btn-link"><i class="fas fa-file-alt"></i> ข้อมูลเพิ่มเติม</a>
         </div>
     </section>
 
@@ -271,31 +272,38 @@
     <section class="card" id="goal">
         <h2 class="card-title"><i class="fas fa-bullseye"></i>เป้าหมายและความสนใจในการศึกษาต่อ</h2>
         <p style="line-height: 1.8; margin-bottom: 15px;">
-            รายละเอียดเกี่ยวกับความสนใจ แรงบันดาลใจ และความมุ่งมั่นในการเข้าศึกษาต่อในคณะเภสัชศาสตร์
+            คลิกเพื่ออ่านรายละเอียดเกี่ยวกับความสนใจและแรงบันดาลใจในการเรียนคณะเภสัชศาสตร์
         </p>
         <div class="btn-container">
-            <a href="goal.html" class="btn-link"><i class="fas fa-arrow-right"></i> อ่านรายละเอียดเป้าหมาย</a>
+            <a href="goal.html" class="btn-link"><i class="fas fa-arrow-right"></i> ดูเป้าหมายและความสนใจ</a>
         </div>
     </section>
 
     <!-- กล่องข้อความที่ 3: ผลงานและกิจกรรม -->
     <section class="card" id="portfolio">
-        <h2 class="card-title"><i class="fas fa-trophy"></i>ผลงานและกิจกรรมที่เข้าร่วม</h2>
+        <h2 class="card-title"><i class="fas fa-trophy"></i>ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
         <p style="line-height: 1.8; margin-bottom: 15px;">
-            รวบรวมเกียรติบัตร โครงงานวิชาการ และกิจกรรมจิตอาสาเพื่อการพัฒนาตนเอง
+            คลิกเพื่อรับชมเกียรติบัตรและรูปภาพกิจกรรมทั้งหมดของฉัน
         </p>
         <div class="btn-container">
-            <a href="portfolio.html" class="btn-link"><i class="fas fa-images"></i> รับชมผลงานและกิจกรรมทั้งหมด</a>
+            <a href="portfolio.html" class="btn-link"><i class="fas fa-images"></i> ดูผลงานและกิจกรรมทั้งหมด</a>
         </div>
     </section>
 
-    <!-- กล่องข้อความที่ 4: ช่องทางการติดต่อ -->
+    <!-- กล่องข้อความที่ 4: ช่องทางการติดต่อ (แสดงครบถ้วน) -->
     <section class="card" id="contact">
         <h2 class="card-title"><i class="fas fa-address-book"></i>ช่องทางการติดต่อ (Contact Information)</h2>
-        <div class="info-grid">
+        <div class="info-list">
             <div class="info-item">
                 <i class="fas fa-phone-alt"></i>
-                <span><strong>เบอร์โทรศัพท์:</strong> 062-473-7156</span>
+                <span><strong>เบอร์โทรศัพท์:</strong> 0624737156</span>
             </div>
             <div class="info-item">
-                <i class="fas fa-envelope"><
+                <i class="fas fa-envelope"></i>
+                <span><strong>Gmail:</strong> s34370@banbung.ac.th</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-comment-dots"></i>
+                <span><strong>ID line:</strong> thch58</span>
+            </div>
+        </div>
