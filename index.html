@@ -14,13 +14,16 @@
         }
 
         body {
-            background-color: #4a72cf;
-            font-family: 'TH Sarabun New', sans-serif;
-            font-size: 22px;
-            margin: 0;
-            padding: 30px 15px;
-            color: #2c3e50;
-        }
+    background-color: #93A06C;
+    /* สร้างลวดลาย Vector SVG ไอคอนเภสัชกรรมแบบซ้ำ (Seamless Tile) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20v15a10 10 0 0 0 10 10h0a10 10 0 0 0 10-10V20M15 20h30"/><path d="M85 25a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM85 30v10"/><circle cx="30" cy="85" r="12"/><path d="M22 85h16"/><path d="M75 95l20-20M80 70l15 15"/></svg>');
+    background-size: 140px 140px; /* ปรับขนาดความห่างของไอคอน */
+    font-family: 'TH Sarabun New', sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 30px 15px;
+    color: #2c3e50;
+}
 
         /* หัวข้อหลักด้านบนสุด */
         .main-header {
