@@ -82,10 +82,10 @@
             box-shadow: 0 4px 12px rgba(220, 105, 134, 0.4);
         }
 
-        /* --- แถบเมนูนำทางด้านขวา (Sidebar) --- */
-        .right-sidebar {
+        /* --- แถบเมนูนำทางด้านซ้าย (Left Sidebar) --- */
+        .left-sidebar {
             position: fixed;
-            right: 15px;
+            left: 15px;
             top: 50%;
             transform: translateY(-50%);
             background-color: rgba(255, 255, 255, 0.95);
@@ -98,7 +98,7 @@
             z-index: 1000;
         }
 
-        .right-sidebar a {
+        .left-sidebar a {
             color: #4a72cf;
             text-decoration: none;
             font-size: 20px;
@@ -112,15 +112,16 @@
             position: relative;
         }
 
-        .right-sidebar a:hover {
+        .left-sidebar a:hover {
             background-color: #dc6986;
             color: white;
         }
 
-        .right-sidebar a::after {
+        /* ข้อความบอกชื่อหัวข้อ จะเด้งออกมาทางขวา */
+        .left-sidebar a::after {
             content: attr(data-tooltip);
             position: absolute;
-            right: 50px;
+            left: 50px;
             background-color: #333;
             color: white;
             padding: 4px 10px;
@@ -133,23 +134,23 @@
             pointer-events: none;
         }
 
-        .right-sidebar a:hover::after {
+        .left-sidebar a:hover::after {
             opacity: 1;
             visibility: visible;
         }
 
-        /* สำหรับหน้าจอมือถือ ซ่อนป้ายข้อความลอยเพื่อไม่ให้บังหน้าจอ */
+        /* ปรับแต่งสำหรับหน้าจอมือถือ */
         @media (max-width: 600px) {
-            .right-sidebar {
-                right: 8px;
+            .left-sidebar {
+                left: 8px;
                 padding: 8px 5px;
             }
-            .right-sidebar a {
+            .left-sidebar a {
                 width: 35px;
                 height: 35px;
                 font-size: 16px;
             }
-            .right-sidebar a::after {
+            .left-sidebar a::after {
                 display: none;
             }
         }
@@ -157,7 +158,7 @@
 </head>
 <body>
 
-    <div class="right-sidebar">
+    <div class="left-sidebar">
         <a href="#profile" data-tooltip="ข้อมูลส่วนตัว"><i class="fas fa-user"></i></a>
         <a href="#goal" data-tooltip="เป้าหมาย"><i class="fas fa-bullseye"></i></a>
         <a href="#portfolio" data-tooltip="ผลงาน & กิจกรรม"><i class="fas fa-trophy"></i></a>
