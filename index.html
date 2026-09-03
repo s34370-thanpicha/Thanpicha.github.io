@@ -4,70 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Thanpicha Prongjit</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- นำเข้าฟอนต์ TH Sarabun New และ Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        /* ตั้งค่าพื้นหลังหลักของเว็บไซต์ */
         body {
             background-color: #4a72cf;
-            font-family: 'Sarabun', sans-serif, Tahoma;
+            font-family: 'TH Sarabun New', sans-serif;
+            font-size: 22px;
             margin: 0;
             padding: 20px;
             color: #000000;
         }
 
-        /* จัดแต่งหัวข้อใหญ่ตรงกลาง */
         .main-title {
             text-align: center;
             color: #dc6986;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            font-size: 3rem;
+            font-weight: bold;
         }
 
-        /* จัดแต่งกล่องข้อความที่มีพื้นหลังสีขาวโปร่งแสง */
         .card {
-            background-color: rgba(255, 255, 255, 0.85); /* สีขาวอ่อนบาง */
+            background-color: rgba(255, 255, 255, 0.85);
             max-width: 800px;
             margin: 0 auto 25px auto;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* จัดแต่งหัวข้อประจำแต่ละกล่อง */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
         .card-title {
             color: #dc6986;
             margin-top: 0;
             margin-bottom: 15px;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
         }
 
-        /* การจัดแต่งรูปภาพส่วนตัว */
         .profile-img {
             width: 180px;
             height: 180px;
             object-fit: cover;
-            border-radius: 50%; /* ทำเป็นรูปวงกลม */
+            border-radius: 50%;
             display: block;
             margin: 0 auto 20px auto;
             border: 4px solid #dc6986;
         }
 
-        /* จัดสไตล์ลิงก์เชื่อมโยงไปยังหน้าที่สอง */
-        .portfolio-link {
+        .btn-link {
             display: inline-block;
             background-color: #dc6986;
             color: white !important;
-            padding: 12px 25px;
+            padding: 8px 20px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
-            margin-top: 10px;
-            transition: background-color 0.3s;
+            font-size: 20px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
         }
 
-        .portfolio-link:hover {
+        .btn-link:hover {
             background-color: #c55370;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(220, 105, 134, 0.4);
         }
     </style>
 </head>
@@ -75,47 +84,44 @@
 
     <h1 class="main-title">Welcome to my portfolio</h1>
 
+    <!-- กล่องข้อความที่ 1: ข้อมูลส่วนตัว -->
     <div class="card" style="text-align: center;">
-          <h2 class="card-title"><i class="fas fa-id-card" style="margin-right: 10px;"></i>ข้อมูลส่วนตัวของฉัน</h2>
+        <h2 class="card-title"><i class="fas fa-id-card" style="margin-right: 10px;"></i>ข้อมูลส่วนตัวของฉัน</h2>
         
         <img src="profile.jpg" alt="รูปภาพของ ธัญพิชชา" class="profile-img">
         
-        <div style="text-align: left; line-height: 1.8;">
-            <p><strong>ชื่อ-นามสกุล:</strong> น.ส.ธัญพิชชา โปร่งจิต</p>
-            <p><strong>Name:</strong> Thanpicha Prongjit</p>
-            <p><strong>การศึกษา:</strong> กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
-            <p><strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
+        <div style="text-align: left; line-height: 1.6;">
+            <p><i class="fas fa-user" style="color: #dc6986; margin-right: 8px;"></i> <strong>ชื่อ-นามสกุล:</strong> น.ส.ธัญพิชชา โปร่งจิต</p>
+            <p><i class="fas fa-heart" style="color: #dc6986; margin-right: 8px;"></i> <strong>ชื่อเล่น:</strong> แก้ม</p>
+            <p><i class="fas fa-signature" style="color: #dc6986; margin-right: 8px;"></i> <strong>Name:</strong> Thanpicha Prongjit</p>
+            <p><i class="fas fa-graduation-cap" style="color: #dc6986; margin-right: 8px;"></i> <strong>การศึกษา:</strong> กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
+            <p><i class="fas fa-flask" style="color: #dc6986; margin-right: 8px;"></i> <strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</p>
         </div>
+
+        <a href="about.html" class="btn-link"><i class="fas fa-info-circle" style="margin-right: 5px;"></i> ข้อมูลเพิ่มเติม</a>
     </div>
 
-    <div class="card">
+    <!-- กล่องข้อความที่ 2: ปุ่มไปหน้าเป้าหมาย -->
+    <div class="card" style="text-align: center;">
         <h2 class="card-title"><i class="fas fa-bullseye" style="margin-right: 10px;"></i>เป้าหมายและความสนใจในการศึกษาต่อ</h2>
-
-        <p style="line-height: 1.8;">
-            ฉันมีความสนใจที่จะศึกษาต่อในคณะเภสัชศาสตร์ สาขาเภสัชศาสตร์ มหาวิทยาลัยมหิดล 
-            เนื่องจากตั้งแต่ระดับชั้นมัธยมศึกษาปีที่ 4 ฉันได้มีโอกาสเข้าร่วมงาน Open House ของมหาวิทยาลัยมหิดล 
-            และได้ร่วมกิจกรรมของคณะเภสัชศาสตร์ ซึ่งทำให้ได้เรียนรู้เกี่ยวกับการปรุงยา ปฏิกิริยาการทำงานของยาแต่ละชนิด 
-            รวมถึงได้ทดลองจำลองการจ่ายยาให้กับผู้ป่วย ประสบการณ์ครั้งนั้นจุดประกายให้เกิดความชอบและความสนใจในสายอาชีพนี้อย่างจริงจัง 
-            หลังจากนั้นจึงได้ศึกษาข้อมูลเพิ่มเติมเกี่ยวกับการเรียนและการประกอบอาชีพด้านเภสัชกรรม จนเกิดความตั้งใจอันแน่วแน่ที่จะเข้าศึกษาต่อในคณะเภสัชศาสตร์
-        </p>
+        <p>คลิกเพื่ออ่านรายละเอียดเกี่ยวกับความสนใจและแรงบันดาลใจในการเรียนคณะเภสัชศาสตร์</p>
+        <a href="goal.html" class="btn-link"><i class="fas fa-arrow-right" style="margin-right: 5px;"></i> ดูเป้าหมายและความสนใจ</a>
     </div>
 
+    <!-- กล่องข้อความที่ 3: ปุ่มไปหน้าผลงาน -->
     <div class="card" style="text-align: center;">
         <h2 class="card-title"><i class="fas fa-trophy" style="margin-right: 10px;"></i>ผลงานและกิจกรรมที่ได้เข้าร่วม</h2>
-
-        <p>คลิกที่ปุ่มด้านล่างเพื่อรับชมผลงานและกิจกรรมทั้งหมดของฉัน</p>
-        <a href="portfolio.html" class="portfolio-link">ดูผลงานและกิจกรรมทั้งหมด</a>
+        <p>คลิกเพื่อรับชมเกียรติบัตรและรูปภาพกิจกรรมทั้งหมดของฉัน</p>
+        <a href="portfolio.html" class="btn-link"><i class="fas fa-images" style="margin-right: 5px;"></i> ดูผลงานและกิจกรรมทั้งหมด</a>
     </div>
 
+    <!-- กล่องข้อความที่ 4: ช่องทางการติดต่อ -->
     <div class="card">
         <h2 class="card-title"><i class="fas fa-address-book" style="margin-right: 10px;"></i>ช่องทางการติดต่อ</h2>
-
-                <div style="line-height: 2.2;">
-        <p><i class="fas fa-phone-alt" style="color: #dc6986; margin-right: 10px;"></i> 
-           <strong>เบอร์โทรศัพท์:</strong> 062-473-7156</p>
-        
-        <p><i class="fas fa-envelope" style="color: #dc6986; margin-right: 10px;"></i> 
-           <strong>Gmail:</strong> s34370@banbung.ac.th</p>
+        <div style="line-height: 1.8;">
+            <p><i class="fas fa-phone-alt" style="color: #dc6986; margin-right: 10px;"></i> <strong>เบอร์โทรศัพท์:</strong> 0624737156</p>
+            <p><i class="fas fa-envelope" style="color: #dc6986; margin-right: 10px;"></i> <strong>Gmail:</strong> s34370@banstung.ac.th</p>
+        </div>
     </div>
 
 </body>
