@@ -4,61 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ผลงานและกิจกรรม - Thanpicha Prongjit</title>
+    <!-- นำเข้าฟอนต์ TH Sarabun New และ Font Awesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        body { background-color: #4a72cf; font-family: 'TH Sarabun New', sans-serif; font-size: 22px; margin: 0; padding: 20px; color: #000; }
-        .main-title { text-align: center; color: #dc6986; margin: 20px 0; font-size: 3rem; font-weight: bold; }
-        .card { background-color: rgba(255, 255, 255, 0.85); max-width: 800px; margin: 0 auto 25px auto; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
-        .back-btn { display: inline-block; background-color: rgba(0, 0, 0, 0.2); color: white; padding: 6px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-bottom: 15px; }
-        .back-btn:hover { background-color: rgba(0, 0, 0, 0.4); }
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+        body { 
+            background-color: #4a72cf; 
+            font-family: 'TH Sarabun New', sans-serif; 
+            font-size: 22px; 
+            margin: 0; 
+            padding: 20px; 
+            color: #000; 
         }
 
-        .gallery-item {
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            text-align: center;
-            padding: 10px;
+        .main-title { 
+            text-align: center; 
+            color: #dc6986; 
+            margin: 20px 0 30px 0; 
+            font-size: 3rem; 
+            font-weight: bold; 
         }
 
-        .gallery-item img {
+        .back-btn { 
+            display: inline-block; 
+            background-color: rgba(0, 0, 0, 0.2); 
+            color: white; 
+            padding: 6px 18px; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover { 
+            background-color: rgba(0, 0, 0, 0.4); 
+        }
+
+        /* การจัดวางกล่องผลงานแต่ละชิ้น */
+        .card { 
+            background-color: rgba(255, 255, 255, 0.85); 
+            max-width: 800px; 
+            margin: 0 auto 25px auto; 
+            padding: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-title { 
+            color: #dc6986; 
+            margin-top: 0; 
+            margin-bottom: 15px; 
+            font-size: 2rem; 
+            font-weight: bold; 
+        }
+
+        /* สไตล์รูปภาพเดี่ยว */
+        .activity-img {
             width: 100%;
-            height: 180px;
+            max-height: 400px;
             object-fit: cover;
-            border-radius: 6px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #dc6986;
+        }
+
+        /* สไตล์สำหรับกล่องที่มี 2 รูปภาพคู่กัน */
+        .img-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .img-grid-2 img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #dc6986;
         }
     </style>
 </head>
 <body>
 
-    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> กลับหน้าหลัก</a>
+    <!-- ปุ่มย้อนกลับหน้าแรก -->
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left" style="margin-right: 5px;"></i> กลับหน้าหลัก</a>
+
     <h1 class="main-title">ผลงานและกิจกรรมของฉัน</h1>
 
+    <!-- รายการที่ 1: โครงงานบอร์ดเกมชีววิทยา -->
     <div class="card">
-        <div class="gallery">
-            <!-- ตัวอย่างรูปภาพกิจกรรม สามารถก็อปปี้เพิ่มรูปได้ -->
-            <div class="gallery-item">
-                <img src="activity1.jpg" alt="กิจกรรมที่ 1">
-                <p style="margin: 8px 0 0 0; font-weight: bold;">กิจกรรม Open House ม.มหิดล</p>
-            </div>
+        <h2 class="card-title"><i class="fas fa-chess-board" style="margin-right: 10px;"></i>โครงงานบอร์ดเกมชีววิทยา</h2>
+        
+        <!-- โค้ดสำหรับใส่รูปภาพ (เปลี่ยนชื่อไฟล์รูปใน src ได้) -->
+        <img src="bio-boardgame.jpg" alt="โครงงานบอร์ดเกมชีววิทยา" class="activity-img">
+        
+        <div style="line-height: 1.8;">
+            <p><strong>รายละเอียด:</strong> ในมัธยมศึกษาปีที่ 5 รายวิชาการศึกษาค้นคว้าอิสระ (IS) ได้ทำงานโครงงานเกี่ยวกับบอร์ดเกม ที่แทรกความรู้วิชาชีววิทยาผ่านการเล่นเกม และโครงงานนี้ได้รับเลือกเป็นตัวแทนห้องไปนำเสนอที่งานของโรงเรียน</p>
+        </div>
+    </div>
 
-            <div class="gallery-item">
-                <img src="activity2.jpg" alt="กิจกรรมที่ 2">
-                <p style="margin: 8px 0 0 0; font-weight: bold;">กิจกรรมจำลองการจ่ายยา</p>
-            </div>
+    <!-- รายการที่ 2: คอร์สจุฬาลงกรณ์มหาวิทยาลัย -->
+    <div class="card">
+        <h2 class="card-title"><i class="fas fa-certificate" style="margin-right: 10px;"></i>เปิดโลกเคมี : สารประกอบอินทรีย์และพอลิเมอร์</h2>
+        
+        <!-- โค้ดสำหรับใส่รูปภาพเกียรติบัตร -->
+        <img src="chula-mooc.jpg" alt="เกียรติบัตร Chula MOOC" class="activity-img">
+        
+        <div style="line-height: 1.8;">
+            <p><strong>สถาบัน:</strong> Chula MOOC (จุฬาลงกรณ์มหาวิทยาลัย) | <strong>ได้รับใบประกาศ:</strong> 27 มีนาคม 2026</p>
+            <p><strong>รายละเอียด:</strong> เป็นการเรียนล่วงหน้าวิชาเคมี เรื่องสารประกอบอินทรีย์และพอลิเมอร์</p>
+        </div>
+    </div>
 
-            <div class="gallery-item">
-                <img src="activity3.jpg" alt="กิจกรรมที่ 3">
-                <p style="margin: 8px 0 0 0; font-weight: bold;">เกียรติบัตรวิชาการ</p>
-            </div>
+    <!-- รายการที่ 3: ค่าย Blooming Heart 2 (ใส่ 2 รูปภาพ) -->
+    <div class="card">
+        <h2 class="card-title"><i class="fas fa-seedling" style="margin-right: 10px;"></i>ค่าย Blooming Heart 2</h2>
+        
+        <!-- โค้ดสำหรับใส่รูปภาพ 2 รูปคู่กัน -->
+        <div class="img-grid-2">
+            <img src="blooming1.jpg" alt="ค่าย Blooming Heart 2 รูปที่ 1">
+            <img src="blooming2.jpg" alt="ค่าย Blooming Heart 2 รูปที่ 2">
+        </div>
+        
+        <div style="line-height: 1.8;">
+            <p><strong>รายละเอียด:</strong> ได้รับการอบรมความรู้และการปฏิบัติเกี่ยวกับศาสนาจีน และทำจิตอาสาปลูกป่าชายเลน</p>
+        </div>
+    </div>
+
+    <!-- รายการที่ 4: ค่าย IS THIS GOOD V.3 -->
+    <div class="card">
+        <h2 class="card-title"><i class="fas fa-hands-helping" style="margin-right: 10px;"></i>ค่าย IS THIS GOOD V.3 # ASK YOUR HEART</h2>
+        
+        <!-- โค้ดสำหรับใส่รูปภาพ -->
+        <img src="ask-your-heart.jpg" alt="ค่าย IS THIS GOOD V.3" class="activity-img">
+        
+        <div style="line-height: 1.8;">
+            <p><strong>รายละเอียด:</strong> เป็นพี่เลี้ยงเด็กในกิจกรรม ช่วยกันดูแล และทำกิจกรรมให้เด็ก ๆ ได้ร่วมสนุกและให้ความรู้เกี่ยวกับศาสนาจีน</p>
         </div>
     </div>
 
