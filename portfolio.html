@@ -19,8 +19,8 @@
 
         body { 
             background-color: #2d6ab5; 
-            /* ลวดลายไอคอนเภสัชกรรม คุมโทนเดียวกับหน้าแรกและหน้าเป้าหมาย */
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 40v40a24 24 0 0 0 24 24h0a24 24 0 0 0 24-24V40M36 40h76"/><rect x="280" y="40" width="44" height="84" rx="22"/><line x1="280" y1="82" x2="324" y2="82"/><circle cx="90" cy="310" r="36"/><line x1="62" y1="310" x2="118" y2="310"/><path d="M270 340a40 40 0 0 1 60-36l20-20"/><path d="M260 280c20 10 30 30 30 50"/><path d="M50 180c30 0 30 40 60 40s30-40 60-40"/><path d="M50 220c30 0 30-40 60-40s30 40 60 40"/><line x1="80" y1="180" x2="80" y2="220"/><line x1="140" y1="180" x2="140" y2="220"/><circle cx="300" cy="190" r="20"/><path d="M320 190l30 30"/><path d="M300 170v-20"/><path d="M190 50l-40 40M180 40l20 20"/><rect x="170" y="290" width="40" height="60" rx="8"/><path d="M180 290v-16h20v16"/></svg>');
+            /* ลวดลาย SVG คุมโทนเดียวกับหน้าอื่น ๆ */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440" fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 40v40a24 24 0 0 0 24 24h0a24 24 0 0 0 24-24V40M36 40h76"/><rect x="280" y="40" width="44" height="84" rx="22"/><line x1="280" y1="82" x2="324" y2="82"/><circle cx="90" cy="310" r="36"/><line x1="62" y1="310" x2="118" y2="310"/><path d="M270 340a40 40 0 0 1 60-36l20-20"/><path d="M260 280c20 10 30 30 30 50"/><path d="M50 180c30 0 30 40 60 40s30-40 60-40"/><path d="M50 220c30 0 30-40 60-40s30 40 60 40"/><line x1="80" y1="180" x2="80" y2="220"/><line x1="140" y1="180" x2="140" y2="220"/><circle cx="300" cy="190" r="20"/><path d="M320 190l30 30"/><path d="M300 170v-20"/><path d="M190 50l-40 40M180 40l20 20"/><rect x="170" y="290" width="40" height="60" rx="8"/><path d="M180 290v-16h20v16"/></svg>');
             background-size: 440px 440px;
             font-family: 'TH Sarabun New', sans-serif; 
             font-size: 22px; 
@@ -148,33 +148,6 @@
             box-shadow: 0 8px 18px rgba(220, 105, 134, 0.35);
         }
 
-        /* ปุ่มย้อนกลับหน้าหลักด้านล่าง */
-        .btn-container {
-            text-align: center;
-            margin-top: 35px;
-            margin-bottom: 20px;
-        }
-
-        .btn-link {
-            display: inline-flex;
-            align-items: center;
-            background: linear-gradient(135deg, #dc6986 0%, #c55370 100%);
-            color: white !important;
-            padding: 10px 28px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 22px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(220, 105, 134, 0.4);
-        }
-
-        .btn-link:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 8px 20px rgba(220, 105, 134, 0.6);
-            background: linear-gradient(135deg, #e37994 0%, #b34460 100%);
-        }
-
         /* แถบสไลด์เมนูนำทางด้านซ้าย */
         .left-sidebar {
             position: fixed;
@@ -281,4 +254,12 @@
             <h2 class="card-title"><i class="fas fa-chess-board" style="margin-right: 10px;"></i>โครงงานบอร์ดเกมชีววิทยา</h2>
             
             <!-- โค้ดสำหรับใส่รูปภาพ 3 รูปเรียงในบรรทัดเดียว -->
-            <div style="display: grid; grid-template-colu
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 15px;">
+                <img src="bio-boardgame1.jpg" alt="รูปบอร์ดเกม 1" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; border: 2px solid #dc6986;">
+                <img src="bio-boardgame2.jpg" alt="รูปบอร์ดเกม 2" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; border: 2px solid #dc6986;">
+                <img src="bio-boardgame3.jpg" alt="รูปบอร์ดเกม 3" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; border: 2px solid #dc6986;">
+            </div>
+            
+            <div style="line-height: 1.8;">
+                <p><strong>รายละเอียด:</strong> ในมัธยมศึกษาปีที่ 5 รายวิชาการศึกษาค้นคว้าอิสระ (IS) ได้ทำงานโครงงานเกี่ยวกับบอร์ดเกม ที่แทรกความรู้วิชาชีววิทยาผ่านการเล่นเกม และโครงงานนี้ได้รับเลือกเป็นตัวแทนห้องไปนำเสนอที่งานของโรงเรียน</p>
+          
