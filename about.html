@@ -3,230 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ข้อมูลส่วนตัวเพิ่มเติม - Thanpicha Prongjit</title>
-    <!-- นำเข้าฟอนต์ TH Sarabun New และ Font Awesome Icons -->
+    <title>ข้อมูลเพิ่มเติม - Thanpicha Prongjit</title>
     <link href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            min-height: 100vh;
-            font-family: 'TH Sarabun New', sans-serif;
-            font-size: 22px;
-            color: #111111;
-        }
-
-        body {
-            background-color: #2d6ab5;
-            /* ลวดลายไอคอนเภสัชกรรม */
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 40v40a24 24 0 0 0 24 24h0a24 24 0 0 0 24-24V40M36 40h76"/><rect x="280" y="40" width="44" height="84" rx="22"/><line x1="280" y1="82" x2="324" y2="82"/><circle cx="90" cy="310" r="36"/><line x1="62" y1="310" x2="118" y2="310"/><path d="M270 340a40 40 0 0 1 60-36l20-20"/><path d="M260 280c20 10 30 30 30 50"/><path d="M50 180c30 0 30 40 60 40s30-40 60-40"/><path d="M50 220c30 0 30-40 60-40s30 40 60 40"/><line x1="80" y1="180" x2="80" y2="220"/><line x1="140" y1="180" x2="140" y2="220"/><circle cx="300" cy="190" r="20"/><path d="M320 190l30 30"/><path d="M300 170v-20"/><path d="M190 50l-40 40M180 40l20 20"/><rect x="170" y="290" width="40" height="60" rx="8"/><path d="M180 290v-16h20v16"/></svg>');
-            background-size: 440px 440px;
-            padding: 30px 20px;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .main-title {
-            text-align: center;
-            color: #ffffff;
-            margin-top: 10px;
-            margin-bottom: 30px;
-            font-size: 3rem;
-            font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        /* กล่องข้อความสีขาวเน้นอ่านง่าย (โปร่งแสง 92%) */
-        .card {
-            background-color: rgba(255, 255, 255, 0.92);
-            margin-bottom: 25px;
-            padding: 25px 35px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            display: block;
-        }
-
-        .card-title {
-            color: #dc6986;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 2.2rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-        }
-
-        .card-title i {
-            margin-right: 12px;
-        }
-
-        .info-list {
-            line-height: 1.8;
-            color: #111111;
-        }
-
-        .info-item {
-            margin: 12px 0;
-            display: flex;
-            align-items: flex-start;
-            font-size: 22px;
-        }
-
-        .info-item i {
-            color: #dc6986;
-            margin-right: 15px;
-            margin-top: 6px;
-            width: 20px;
-            text-align: center;
-        }
-
-        .info-text {
-            color: #222222;
-        }
-
-        .info-text strong {
-            color: #000000;
-        }
-
-        /* ปุ่มย้อนกลับหน้าหลัก */
-        .btn-container {
-            text-align: center;
-            margin-top: 35px;
-            margin-bottom: 20px;
-        }
-
-        .btn-link {
-            display: inline-block;
-            background-color: #dc6986;
-            color: #ffffff !important;
-            padding: 10px 28px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 22px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-        }
-
-        .btn-link:hover {
-            background-color: #c55370;
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(220, 105, 134, 0.4);
-        }
-
-        /* แถบเมนูนำทางด้านซ้าย */
-        .left-sidebar {
-            position: fixed;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 12px 8px;
-            border-radius: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 1000;
-        }
-
-        .left-sidebar a {
-            color: #2d6ab5;
-            text-decoration: none;
-            font-size: 20px;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .left-sidebar a:hover {
-            background-color: #dc6986;
-            color: #ffffff;
-        }
-
-        @media (max-width: 600px) {
-            .left-sidebar { left: 8px; padding: 8px 5px; }
-            .left-sidebar a { width: 35px; height: 35px; font-size: 16px; }
-            .card { padding: 20px; }
-        }
+        body { background-color: #4a72cf; font-family: 'TH Sarabun New', sans-serif; font-size: 22px; margin: 0; padding: 20px; color: #000; }
+        .main-title { text-align: center; color: #dc6986; margin: 20px 0; font-size: 3rem; font-weight: bold; }
+        .card { background-color: rgba(255, 255, 255, 0.85); max-width: 800px; margin: 0 auto 25px auto; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .card-title { color: #dc6986; margin-top: 0; margin-bottom: 15px; font-size: 2rem; font-weight: bold; }
+        .back-btn { display: inline-block; background-color: rgba(0, 0, 0, 0.2); color: white; padding: 6px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-bottom: 15px; }
+        .back-btn:hover { background-color: rgba(0, 0, 0, 0.4); }
     </style>
 </head>
 <body>
 
-    <!-- แถบเมนูนำทางด้านซ้าย -->
-    <div class="left-sidebar">
-        <a href="index.html#profile"><i class="fas fa-user"></i></a>
-        <a href="goal.html"><i class="fas fa-bullseye"></i></a>
-        <a href="portfolio.html"><i class="fas fa-trophy"></i></a>
-        <a href="index.html#contact"><i class="fas fa-address-book"></i></a>
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> กลับหน้าหลัก</a>
+    <h1 class="main-title">ข้อมูลเพิ่มเติม</h1>
+
+    <!-- กล่องข้อความที่ 1: ประวัติการศึกษา -->
+    <div class="card">
+        <h2 class="card-title"><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i>ประวัติการศึกษา</h2>
+        <div style="line-height: 1.8;">
+            <p><i class="fas fa-child" style="color: #dc6986; margin-right: 8px;"></i> <strong>ระดับชั้นอนุบาลศึกษา:</strong> โรงเรียนอนุบาลพิมลกิจจานุวัตร</p>
+            <p><i class="fas fa-school" style="color: #dc6986; margin-right: 8px;"></i> <strong>ระดับชั้นประถมศึกษา:</strong> โรงเรียนเฮงฮั้ว</p>
+            <p><i class="fas fa-university" style="color: #dc6986; margin-right: 8px;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนต้น:</strong> โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+            <p><i class="fas fa-user-graduate" style="color: #dc6986; margin-right: 8px;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนปลาย:</strong> โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+        </div>
     </div>
 
-    <div class="container">
-        <h1 class="main-title">ข้อมูลส่วนตัวเพิ่มเติม</h1>
-
-        <!-- กล่องข้อความที่ 1: ประวัติการศึกษา -->
-        <div class="card">
-            <h2 class="card-title"><i class="fas fa-graduation-cap"></i>ประวัติการศึกษา (Education)</h2>
-            <div class="info-list">
-                <div class="info-item">
-                    <i class="fas fa-school"></i>
-                    <span class="info-text"><strong>ระดับมัธยมศึกษาตอนปลาย:</strong> โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-flask"></i>
-                    <span class="info-text"><strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ (MSEP)</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-star"></i>
-                    <span class="info-text"><strong>เกรดเฉลี่ยสะสม (GPAX):</strong> 3.XX (กรอกเกรดเฉลี่ยของคุณตรงนี้)</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- กล่องข้อความที่ 2: ความสามารถและทักษะพิเศษ -->
-        <div class="card">
-            <h2 class="card-title"><i class="fas fa-award"></i>ทักษะและความสามารถพิเศษ (Skills)</h2>
-            <div class="info-list">
-                <div class="info-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span class="info-text"><strong>ทักษะทางวิชาการ:</strong> การปฏิบัติการทางวิทยาศาสตร์พื้นฐาน และวิชาเคมี</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span class="info-text"><strong>ทักษะภาษา:</strong> ภาษาไทย (ระดับดีมาก), ภาษาอังกฤษ (ระดับสื่อสารพื้นฐาน)</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span class="info-text"><strong>ทักษะคอมพิวเตอร์:</strong> HTML, CSS, Microsoft Office, Canva</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span class="info-text"><strong>งานอดิเรก:</strong> ทบทวนเนื้อหาบทเรียน, อ่านหนังสือเกี่ยวกับสุขภาพและยา</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- ปุ่มย้อนกลับไปหน้าแรก -->
-        <div class="btn-container">
-            <a href="index.html" class="btn-link"><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> กลับหน้าหลัก</a>
+    <!-- กล่องข้อความที่ 2: ผลการเรียน -->
+    <div class="card">
+        <h2 class="card-title"><i class="fas fa-award" style="margin-right: 10px;"></i>ผลการเรียน</h2>
+        <div style="line-height: 1.8;">
+            <p><strong>ระดับชั้นมัธยมศึกษาตอนต้น:</strong> (กรอกเกรดเฉลี่ย เช่น 3.xx)</p>
+            <p><strong>ระดับชั้นมัธยมศึกษาตอนปลาย:</strong> (กรอกเกรดเฉลี่ย เช่น 3.xx)</p>
         </div>
     </div>
 
