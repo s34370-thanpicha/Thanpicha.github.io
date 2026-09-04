@@ -3,48 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ข้อมูลเพิ่มเติม - Thanpicha Prongjit</title>
+    <title>ข้อมูลส่วนตัวเพิ่มเติม - Thanpicha Prongjit</title>
     <link href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-    background-color: #2d6ab5;
-    /* ขยายขนาดพื้นหลังเป็น 440px (ใหญ่ขึ้น 2 เท่า) + กระจายไอคอน 8 แบบไม่ซ้ำกัน */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 40v40a24 24 0 0 0 24 24h0a24 24 0 0 0 24-24V40M36 40h76"/><rect x="280" y="40" width="44" height="84" rx="22"/><line x1="280" y1="82" x2="324" y2="82"/><circle cx="90" cy="310" r="36"/><line x1="62" y1="310" x2="118" y2="310"/><path d="M270 340a40 40 0 0 1 60-36l20-20"/><path d="M260 280c20 10 30 30 30 50"/><path d="M50 180c30 0 30 40 60 40s30-40 60-40"/><path d="M50 220c30 0 30-40 60-40s30 40 60 40"/><line x1="80" y1="180" x2="80" y2="220"/><line x1="140" y1="180" x2="140" y2="220"/><circle cx="300" cy="190" r="20"/><path d="M320 190l30 30"/><path d="M300 170v-20"/><path d="M190 50l-40 40M180 40l20 20"/><rect x="170" y="290" width="40" height="60" rx="8"/><path d="M180 290v-16h20v16"/></svg>');
-    background-size: 440px 440px; /* ขนาดใหญ่ขึ้นเท่าตัว */
-    font-family: 'TH Sarabun New', sans-serif;
-    font-size: 22px;
-    margin: 0;
-    padding: 20px;
-    color: #000000;
-}
+            background-color: #2d6ab5;
+            /* ลวดลายไอคอนเภสัชกรรมขนาดใหญ่ คละแบบไม่ซ้ำ คุมโทนเดียวกับทุกหน้า */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 40v40a24 24 0 0 0 24 24h0a24 24 0 0 0 24-24V40M36 40h76"/><rect x="280" y="40" width="44" height="84" rx="22"/><line x1="280" y1="82" x2="324" y2="82"/><circle cx="90" cy="310" r="36"/><line x1="62" y1="310" x2="118" y2="310"/><path d="M270 340a40 40 0 0 1 60-36l20-20"/><path d="M260 280c20 10 30 30 30 50"/><path d="M50 180c30 0 30 40 60 40s30-40 60-40"/><path d="M50 220c30 0 30-40 60-40s30 40 60 40"/><line x1="80" y1="180" x2="80" y2="220"/><line x1="140" y1="180" x2="140" y2="220"/><circle cx="300" cy="190" r="20"/><path d="M320 190l30 30"/><path d="M300 170v-20"/><path d="M190 50l-40 40M180 40l20 20"/><rect x="170" y="290" width="40" height="60" rx="8"/><path d="M180 290v-16h20v16"/></svg>');
+            background-size: 440px 440px;
+            font-family: 'TH Sarabun New', sans-serif;
+            font-size: 22px;
+            margin: 0;
+            padding: 20px;
+            color: #000000;
+        }
 
-    </style>
-</head>
-<body>
+        .main-title {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
 
-    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> กลับหน้าหลัก</a>
-    <h1 class="main-title">ข้อมูลเพิ่มเติม</h1>
+        /* กล่องข้อความสีขาวบาง (ความโปร่งใส 0.85) */
+        .card {
+            background-color: rgba(255, 255, 255, 0.85);
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+            padding: 25px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    <!-- กล่องข้อความที่ 1: ประวัติการศึกษา -->
-    <div class="card">
-        <h2 class="card-title"><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i>ประวัติการศึกษา</h2>
-        <div style="line-height: 1.8;">
-            <p><i class="fas fa-child" style="color: #dc6986; margin-right: 8px;"></i> <strong>ระดับชั้นอนุบาลศึกษา:</strong> โรงเรียนอนุบาลพิมลกิจจานุวัตร</p>
-            <p><i class="fas fa-school" style="color: #dc6986; margin-right: 8px;"></i> <strong>ระดับชั้นประถมศึกษา:</strong> โรงเรียนเฮงฮั้ว</p>
-            <p><i class="fas fa-university" style="color: #dc6986; margin-right: 8px;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนต้น:</strong> โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
-            <p><i class="fas fa-user-graduate" style="color: #dc6986; margin-right: 8px;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนปลาย:</strong> โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
-        </div>
-    </div>
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
 
-    <!-- กล่องข้อความที่ 2: ผลการเรียน -->
-    <div class="card">
-        <h2 class="card-title"><i class="fas fa-award" style="margin-right: 10px;"></i>ผลการเรียน</h2>
-        <div style="line-height: 1.8;">
-            <p><strong>ระดับชั้นมัธยมศึกษาตอนต้น:</strong> 3.91 </p>
-            <p><strong>ระดับชั้นมัธยมศึกษาตอนปลาย:</strong> 3.87 </p>
-        </div>
-    </div>
+        .card-title {
+            color: #dc6986;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 2.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
 
-</body>
-</html>
+        .card-title i {
+            margin-right: 12px;
+        }
+
+        .info
