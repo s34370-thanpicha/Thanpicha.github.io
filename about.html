@@ -29,6 +29,45 @@
             margin: 0 auto;
         }
 
+        /* แถบเมนูนำทางแนวตั้งสไลด์ลอยฝั่งซ้าย (Left Sidebar) */
+        .left-sidebar {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 14px 10px;
+            border-radius: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .left-sidebar a {
+            color: #2d6ab5;
+            text-decoration: none;
+            font-size: 20px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .left-sidebar a:hover {
+            background-color: #dc6986;
+            color: white;
+            transform: scale(1.15);
+            box-shadow: 0 4px 10px rgba(220, 105, 134, 0.4);
+        }
+
         .main-title { 
             text-align: center; 
             color: #ffffff; 
@@ -80,7 +119,7 @@
             margin-right: 12px;
         }
 
-        /* โครงสร้างเส้น Timeline */
+        /* โครงสร้าง Timeline */
         .timeline {
             position: relative;
             padding-left: 30px;
@@ -98,7 +137,6 @@
             margin-bottom: 0;
         }
 
-        /* จุดวงกลมบนเส้น Timeline */
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -130,7 +168,6 @@
             color: #222222;
         }
 
-        /* ป้าย Badge แสดงเกรดเฉลี่ย */
         .grade-badge {
             display: inline-block;
             background: #fde8ed;
@@ -142,7 +179,6 @@
             border: 1px solid rgba(220, 105, 134, 0.3);
         }
 
-        /* ปุ่มย้อนกลับ */
         .back-btn { 
             display: inline-flex; 
             align-items: center;
@@ -167,6 +203,22 @@
             box-shadow: 0 6px 18px rgba(220, 105, 134, 0.6);
         }
 
+        @media (max-width: 768px) {
+            .left-sidebar { 
+                left: 10px; 
+                padding: 10px 6px; 
+                gap: 10px;
+            }
+            .left-sidebar a { 
+                width: 36px; 
+                height: 36px; 
+                font-size: 16px; 
+            }
+            .container {
+                padding-left: 45px;
+            }
+        }
+
         @media (max-width: 600px) {
             .card { padding: 20px; }
             .main-title { font-size: 2.5rem; }
@@ -177,11 +229,21 @@
 </head>
 <body>
 
+    <!-- แถบเมนูนำทางด้านซ้าย -->
+    <div class="left-sidebar">
+        <a href="index.html#profile" title="ประวัติส่วนตัว"><i class="fas fa-user"></i></a>
+        <a href="goal.html" title="เป้าหมายการศึกษา"><i class="fas fa-bullseye"></i></a>
+        <a href="portfolio.html" title="ผลงาน"><i class="fas fa-trophy"></i></a>
+        <a href="index.html#contact" title="ช่องทางติดต่อ"><i class="fas fa-address-book"></i></a>
+    </div>
+
     <div class="container">
+        <!-- ปุ่มย้อนกลับ -->
         <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> กลับหน้าหลัก</a>
         
         <h1 class="main-title">ข้อมูลเพิ่มเติม</h1>
 
+        <!-- กล่องข้อความที่ 1: ประวัติการศึกษา (รูปแบบ Timeline) -->
         <div class="card">
             <h2 class="card-title"><i class="fas fa-graduation-cap"></i>ประวัติการศึกษา</h2>
             
@@ -208,6 +270,7 @@
             </div>
         </div>
 
+        <!-- กล่องข้อความที่ 2: ผลการเรียน -->
         <div class="card">
             <h2 class="card-title"><i class="fas fa-award"></i>ผลการเรียน</h2>
             <div class="timeline" style="border-left-color: #2d6ab5;">
@@ -216,17 +279,4 @@
                     <div class="timeline-content">
                         เกรดเฉลี่ยสะสม: <span class="grade-badge">(กรอกเกรดเฉลี่ย เช่น 3.xx)</span>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-title" style="color: #2d6ab5;"><i class="fas fa-star"></i> ระดับชั้นมัธยมศึกษาตอนปลาย</div>
-                    <div class="timeline-content">
-                        เกรดเฉลี่ยสะสม: <span class="grade-badge">(กรอกเกรดเฉลี่ย เช่น 3.xx)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
+ 
