@@ -130,3 +130,159 @@
         .timeline-item {
             position: relative;
             margin-bottom: 25px;
+            padding: 5px 0 5px 10px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 12px;
+            width: 14px;
+            height: 14px;
+            background: #ffffff;
+            border: 3px solid #dc6986;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            background: #dc6986;
+            transform: scale(1.3);
+        }
+
+        .timeline-title {
+            font-weight: bold;
+            color: #dc6986;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .timeline-content {
+            font-size: 22px;
+            color: #222222;
+        }
+
+        .grade-badge {
+            display: inline-block;
+            background: #fde8ed;
+            color: #dc6986;
+            padding: 2px 14px;
+            border-radius: 12px;
+            font-weight: bold;
+            margin-left: 8px;
+            border: 1px solid rgba(220, 105, 134, 0.3);
+        }
+
+        .back-btn { 
+            display: inline-flex; 
+            align-items: center;
+            background: linear-gradient(135deg, #dc6986 0%, #c55370 100%);
+            color: white !important; 
+            padding: 8px 20px; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-weight: bold; 
+            font-size: 20px;
+            margin-bottom: 15px; 
+            box-shadow: 0 4px 12px rgba(220, 105, 134, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn i {
+            margin-right: 8px;
+        }
+
+        .back-btn:hover { 
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 6px 18px rgba(220, 105, 134, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .left-sidebar { 
+                left: 10px; 
+                padding: 10px 6px; 
+                gap: 10px;
+            }
+            .left-sidebar a { 
+                width: 36px; 
+                height: 36px; 
+                font-size: 16px; 
+            }
+            .container {
+                padding-left: 45px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card { padding: 20px; }
+            .main-title { font-size: 2.5rem; }
+            .timeline { margin-left: 10px; padding-left: 20px; }
+            .timeline-item::before { left: -29px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- แถบเมนูนำทางด้านซ้าย -->
+    <div class="left-sidebar">
+        <a href="index.html#profile" title="ประวัติส่วนตัว"><i class="fas fa-user"></i></a>
+        <a href="goal.html" title="เป้าหมายการศึกษา"><i class="fas fa-bullseye"></i></a>
+        <a href="portfolio.html" title="ผลงาน"><i class="fas fa-trophy"></i></a>
+        <a href="index.html#contact" title="ช่องทางติดต่อ"><i class="fas fa-address-book"></i></a>
+    </div>
+
+    <div class="container">
+        <!-- ปุ่มย้อนกลับ -->
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> กลับหน้าหลัก</a>
+        
+        <h1 class="main-title">ข้อมูลเพิ่มเติม</h1>
+
+        <!-- กล่องข้อความที่ 1: ประวัติการศึกษา (รูปแบบ Timeline) -->
+        <div class="card">
+            <h2 class="card-title"><i class="fas fa-graduation-cap"></i>ประวัติการศึกษา</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title"><i class="fas fa-child"></i> ระดับชั้นอนุบาลศึกษา</div>
+                    <div class="timeline-content">โรงเรียนอนุบาลพิมลกิจจานุวัตร</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-title"><i class="fas fa-school"></i> ระดับชั้นประถมศึกษา</div>
+                    <div class="timeline-content">โรงเรียนเฮงฮั้ว</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-title"><i class="fas fa-university"></i> ระดับชั้นมัธยมศึกษาตอนต้น</div>
+                    <div class="timeline-content">โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-title"><i class="fas fa-user-graduate"></i> ระดับชั้นมัธยมศึกษาตอนปลาย</div>
+                    <div class="timeline-content">โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- กล่องข้อความที่ 2: ผลการเรียน -->
+        <div class="card">
+            <h2 class="card-title"><i class="fas fa-award"></i>ผลการเรียน</h2>
+            <div class="timeline" style="border-left-color: #2d6ab5;">
+                <div class="timeline-item">
+                    <div class="timeline-title" style="color: #2d6ab5;"><i class="fas fa-star"></i> ระดับชั้นมัธยมศึกษาตอนต้น</div>
+                    <div class="timeline-content">
+                        เกรดเฉลี่ยสะสม: <span class="grade-badge">3.91</span>
+                    </div>
+
+             <div class="timeline-item">
+                <div class="timeline-title" style="color: #2d6ab5;"><i class="fas fa-star"></i> ระดับชั้นมัธยมศึกษาตอนปลาย</div>
+                <div class="timeline-content">
+                    เกรดเฉลี่ยสะสม: <span class="grade-badge">3.87</span>
+                </div>
+ 
