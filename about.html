@@ -12,15 +12,12 @@
         }
 
         body { 
-            background-color: #4a72cf; 
-            /* ลวดลาย SVG คุมโทนน่ารักสมวัย */
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440" fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 40v40a24 24 0 0 0 24 24h0a24 24 0 0 0 24-24V40M36 40h76"/><rect x="280" y="40" width="44" height="84" rx="22"/><line x1="280" y1="82" x2="324" y2="82"/><circle cx="90" cy="310" r="36"/><line x1="62" y1="310" x2="118" y2="310"/><path d="M270 340a40 40 0 0 1 60-36l20-20"/><path d="M260 280c20 10 30 30 30 50"/><path d="M50 180c30 0 30 40 60 40s30-40 60-40"/><path d="M50 220c30 0 30-40 60-40s30 40 60 40"/><line x1="80" y1="180" x2="80" y2="220"/><line x1="140" y1="180" x2="140" y2="220"/><circle cx="300" cy="190" r="20"/><path d="M320 190l30 30"/><path d="M300 170v-20"/><path d="M190 50l-40 40M180 40l20 20"/><rect x="170" y="290" width="40" height="60" rx="8"/><path d="M180 290v-16h20v16"/></svg>');
-            background-size: 440px 440px;
+            background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
             font-family: 'TH Sarabun New', sans-serif; 
             font-size: 22px; 
             margin: 0; 
             padding: 30px 20px; 
-            color: #000; 
+            color: #333; 
             min-height: 100vh;
         }
 
@@ -35,13 +32,13 @@
             left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             padding: 14px 10px;
             border-radius: 30px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.8);
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -49,7 +46,7 @@
         }
 
         .left-sidebar a {
-            color: #4a72cf;
+            color: #4e4376;
             text-decoration: none;
             font-size: 20px;
             width: 44px;
@@ -62,10 +59,10 @@
         }
 
         .left-sidebar a:hover {
-            background-color: #dc6986;
+            background-color: #ff758c;
             color: white;
             transform: scale(1.15);
-            box-shadow: 0 4px 10px rgba(220, 105, 134, 0.4);
+            box-shadow: 0 4px 12px rgba(255, 117, 140, 0.4);
         }
 
         /* หัวข้อหลัก */
@@ -75,33 +72,24 @@
             margin: 15px 0 35px 0; 
             font-size: 3.2rem; 
             font-weight: bold; 
-            text-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            position: relative;
-        }
-
-        .main-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #dc6986, #ff9eb5);
-            margin: 8px auto 0 auto;
-            border-radius: 2px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
         }
 
         /* ปุ่มย้อนกลับ */
         .back-btn { 
             display: inline-flex; 
             align-items: center; 
-            background: rgba(0, 0, 0, 0.25); 
+            background: rgba(255, 255, 255, 0.15); 
             color: white !important; 
-            padding: 8px 20px; 
+            padding: 8px 22px; 
             text-decoration: none; 
-            border-radius: 20px; 
+            border-radius: 25px; 
             font-weight: bold; 
             font-size: 20px;
-            margin-bottom: 15px; 
-            backdrop-filter: blur(5px);
+            margin-bottom: 20px; 
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
 
@@ -110,110 +98,61 @@
         }
 
         .back-btn:hover { 
-            background: rgba(0, 0, 0, 0.45); 
+            background: rgba(255, 255, 255, 0.3); 
             transform: translateY(-2px);
         }
 
         /* กล่องข้อความ */
         .card { 
-            background-color: rgba(255, 255, 255, 0.88); 
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.95); 
+            border-radius: 24px; 
             max-width: 800px; 
             margin: 0 auto 30px auto; 
-            padding: 30px 35px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12); 
+            padding: 35px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
             transition: all 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.18);
-            background-color: rgba(255, 255, 255, 0.94);
+            transform: translateY(-4px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
         }
 
         .card-title { 
-            color: #dc6986; 
+            color: #4e4376; 
             margin-top: 0; 
             margin-bottom: 25px; 
             font-size: 2.3rem; 
             font-weight: bold; 
             display: flex;
             align-items: center;
-            border-bottom: 2px dashed rgba(220, 105, 134, 0.3);
-            padding-bottom: 12px;
-        }
-
-        /* -------------------------------------------
-           สไตล์ไทม์ไลน์ที่เพิ่มเข้ามา (Timeline Styles)
-        ------------------------------------------- */
-        .timeline {
-            position: relative;
-            padding-left: 35px;
-            margin-top: 10px;
-        }
-
-        /* เส้นแนวตั้งลากผ่านไอเท็ม */
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 17px;
-            top: 10px;
-            bottom: 20px;
-            width: 3px;
-            background: linear-gradient(180deg, #dc6986 0%, rgba(220, 105, 134, 0.2) 100%);
-            border-radius: 2px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
         }
 
         .info-list {
-            line-height: 1.9;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        /* จัดแต่ละแถวของข้อมูลให้เป็นโหนดไทม์ไลน์ */
         .info-list p {
-            position: relative;
-            margin: 0 0 20px 0;
-            padding: 12px 18px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 12px;
-            border-left: 4px solid #dc6986;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+            margin: 0;
+            padding: 14px 20px;
+            background-color: #f8f9fa;
+            border-radius: 16px;
             display: flex;
             align-items: center;
+            border: 1px solid #e9ecef;
             transition: all 0.3s ease;
         }
 
         .info-list p:hover {
-            background: rgba(255, 255, 255, 0.95);
-            transform: translateX(6px);
-            box-shadow: 0 5px 15px rgba(220, 105, 134, 0.15);
-        }
-
-        /* วงกลมจุดเชื่อมต่อบนเส้นไทม์ไลน์ */
-        .info-list p::before {
-            content: '';
-            position: absolute;
-            left: -27px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
             background-color: #ffffff;
-            border: 3px solid #dc6986;
-            box-shadow: 0 0 0 3px rgba(220, 105, 134, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .info-list p:hover::before {
-            background-color: #dc6986;
-            scale: 1.2;
-        }
-
-        .info-list p:last-child {
-            margin-bottom: 0;
+            border-color: #ff758c;
+            transform: scale(1.01);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
 
         @media (max-width: 768px) {
@@ -233,17 +172,14 @@
         }
 
         @media (max-width: 600px) {
-            .card { padding: 20px; }
+            .card { padding: 22px; }
             .main-title { font-size: 2.5rem; }
-            .timeline { padding-left: 25px; }
-            .timeline::before { left: 10px; }
-            .info-list p::before { left: -21px; }
+            .info-list p { flex-direction: column; align-items: flex-start; gap: 5px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- แถบเมนูนำทางด้านซ้าย -->
     <div class="left-sidebar">
         <a href="index.html#profile" title="ประวัติส่วนตัว"><i class="fas fa-user"></i></a>
         <a href="goal.html" title="เป้าหมายการศึกษา"><i class="fas fa-bullseye"></i></a>
@@ -252,32 +188,25 @@
     </div>
 
     <div class="container">
-        <!-- ปุ่มย้อนกลับ -->
         <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> กลับหน้าหลัก</a>
         
         <h1 class="main-title">ข้อมูลเพิ่มเติม</h1>
 
-        <!-- กล่องข้อความที่ 1: ประวัติการศึกษา -->
         <div class="card">
-            <h2 class="card-title"><i class="fas fa-graduation-cap" style="margin-right: 12px;"></i>ประวัติการศึกษา</h2>
-            <div class="timeline">
-                <div class="info-list">
-                    <p><i class="fas fa-child" style="color: #dc6986; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นอนุบาลศึกษา:</strong>&nbsp;โรงเรียนอนุบาลพิมลกิจจานุวัตร</p>
-                    <p><i class="fas fa-school" style="color: #dc6986; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นประถมศึกษา:</strong>&nbsp;โรงเรียนเฮงฮั้ว</p>
-                    <p><i class="fas fa-university" style="color: #dc6986; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนต้น:</strong>&nbsp;โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
-                    <p><i class="fas fa-user-graduate" style="color: #dc6986; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนปลาย:</strong>&nbsp;โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
-                </div>
+            <h2 class="card-title"><i class="fas fa-graduation-cap" style="margin-right: 12px; color: #ff758c;"></i>ประวัติการศึกษา</h2>
+            <div class="info-list">
+                <p><i class="fas fa-child" style="color: #ff758c; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นอนุบาลศึกษา:</strong>&nbsp;โรงเรียนอนุบาลพิมลกิจจานุวัตร</p>
+                <p><i class="fas fa-school" style="color: #ff758c; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นประถมศึกษา:</strong>&nbsp;โรงเรียนเฮงฮั้ว</p>
+                <p><i class="fas fa-university" style="color: #ff758c; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนต้น:</strong>&nbsp;โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+                <p><i class="fas fa-user-graduate" style="color: #ff758c; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนปลาย:</strong>&nbsp;โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
             </div>
         </div>
 
-        <!-- กล่องข้อความที่ 2: ผลการเรียน -->
         <div class="card">
-            <h2 class="card-title"><i class="fas fa-award" style="margin-right: 12px;"></i>ผลการเรียน</h2>
-            <div class="timeline">
-                <div class="info-list">
-                    <p><i class="fas fa-star" style="color: #dc6986; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนต้น:</strong>&nbsp;(กรอกเกรดเฉลี่ย เช่น 3.xx)</p>
-                    <p><i class="fas fa-star" style="color: #dc6986; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนปลาย:</strong>&nbsp;(กรอกเกรดเฉลี่ย เช่น 3.xx)</p>
-                </div>
+            <h2 class="card-title"><i class="fas fa-award" style="margin-right: 12px; color: #ff758c;"></i>ผลการเรียน</h2>
+            <div class="info-list">
+                <p><i class="fas fa-star" style="color: #ff758c; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนต้น:</strong>&nbsp;(กรอกเกรดเฉลี่ย เช่น 3.xx)</p>
+                <p><i class="fas fa-star" style="color: #ff758c; margin-right: 12px; width: 20px; text-align: center;"></i> <strong>ระดับชั้นมัธยมศึกษาตอนปลาย:</strong>&nbsp;(กรอกเกรดเฉลี่ย เช่น 3.xx)</p>
             </div>
         </div>
     </div>
