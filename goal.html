@@ -249,6 +249,21 @@
             .card { padding: 20px; }
             .main-title { font-size: 2.5rem; }
         }
+        .image-gallery {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  overflow-x: auto; /* เพิ่มให้เลื่อนซ้าย-ขวาได้หากหน้าจอแคบ */
+}
+
+.image-gallery img {
+  width: 48%; /* ขยายความกว้างรูปภาพ */
+  max-height: 250px; /* เพิ่มความสูงของรูปภาพ */
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
     </style>
 </head>
 <body>
